@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    env_file:
+      - ./.env
+    expose:
+      - 1433
+    ports:
+      - 14332:1433
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
