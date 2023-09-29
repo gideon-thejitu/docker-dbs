@@ -1,3 +1,4 @@
 /mssql/data/
 /mssql/log/
 /mssql/secrets/
+mssql/.env
